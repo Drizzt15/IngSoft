@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.unizar.eina.gestionPedidosProductos">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Notepadv3">
+        <activity
+            android:name=".ActivityProductsOrders"
+            android:exported="true" />
+        <activity
+            android:name=".PedidoEdit"
+            android:label="@string/app_name"
+            android:parentActivityName=".ActivityPedidos">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="es.unizar.eina.gestionPedidosProductos.ActivityPedidos" />
+        </activity>
+        <activity
+            android:name=".ActivityPedidos"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityProductos"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ProductEdit"
+            android:label="@string/app_name"
+            android:parentActivityName=".ActivityProductos">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="es.unizar.eina.gestionPedidosProductos.ActivityProductos" />
+        </activity>
+    </application>
+
+</manifest>
